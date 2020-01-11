@@ -1,0 +1,5 @@
+# for Maven
+/target/
+
+# for IntelliJ Idea
+/.idea/
