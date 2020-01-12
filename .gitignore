@@ -1,5 +1,8 @@
 # for Maven
 /target/
 
+# for Maven wrapper
+/.mvn/wrapper/maven-wrapper.jar
+
 # for IntelliJ Idea
 /.idea/
