@@ -1,4 +1,4 @@
-package pl.jakalski.example;
+package pl.jakalski.stunt;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
