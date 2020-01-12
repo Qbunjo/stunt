@@ -12,5 +12,7 @@ public class Meeting {
     private List<WhosInvited> getList() {
         return list;
     }
+    private List<WhatToTake> getList() {return list;}
+
 
 }
