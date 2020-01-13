@@ -58,8 +58,6 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<!-- required because of missing POM of newest (SNAPSHOT) version -->
-				<version>2.3.0.BUILD-20200111.072712-105</version>
 			</plugin>
 		</plugins>
 	</build>
