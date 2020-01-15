@@ -29,10 +29,9 @@ public class MeetingManager {
             
                  NewMeeting = lista.get(number);
 
-                    break;
-                
-               
+                               
+              
             }
-            return total;
+            return NewMeeting;
     }
 }
