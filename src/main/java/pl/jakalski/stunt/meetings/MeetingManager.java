@@ -1,3 +1,4 @@
+  
 package pl.jakalski.stunt.meetings;
 
 import java.time.LocalDateTime;
@@ -14,8 +15,8 @@ public class MeetingManager {
         LocalDateTime date;
 
         public void AddMeeting (String name, LocalDateTime date, String place){
-            MeetingList newMeeting = new MeetingList(String name, LocalDateTime date, String place);
-            meetingList.add(newMeeting);
+            MeetingList newMeeting = new MeetingList(String, LocalDateTime, String);
+            MeetingList.add(newMeeting);
         }
         public int MeetingsNumber() {
 
@@ -23,15 +24,14 @@ public class MeetingManager {
 
             return number;
         }
-        public List FindMeeting( String name) {
+        public List FindMeeting( Integer number) {
 
-            for (MeetingList MeetingList : newMeeting) {
-                if (name==newMeeting.name) {
-                    Pozycja szukanaPozycja = lista.get(i);
+            
+                 NewMeeting = lista.get(number);
 
                     break;
-                }
-                i++;
+                
+               
             }
             return total;
     }
