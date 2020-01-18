@@ -4,6 +4,8 @@ class Meeting {
 
     private static int nextId = 0;
     private Integer id;
+    public LocalDateTime meetingDate;
+    public String meetingSpecs;
 
     Meeting() {
         nextId++; //nextId gets increased
