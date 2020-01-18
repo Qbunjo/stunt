@@ -6,8 +6,8 @@ class Meeting {
     private Integer id;
 
     Meeting() {
-        id = nextId + 1; //creates new Id
         nextId++; //nextId gets increased
+        id = nextId; //creates new Id
     }
 
     Integer getId() {
