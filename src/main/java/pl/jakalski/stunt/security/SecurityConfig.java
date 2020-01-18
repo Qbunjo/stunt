@@ -60,6 +60,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .permitAll()
 
                 .and()
+                .httpBasic()
+
+                .and()
                 .csrf()
                 .disable();
     }
