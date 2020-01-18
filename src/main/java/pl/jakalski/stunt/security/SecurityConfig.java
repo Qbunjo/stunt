@@ -45,6 +45,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
 
                 .formLogin()
+                // commented out, because Spring should generate default login page
                 //.loginPage("/login")
                 .loginProcessingUrl("/perform_login")
                 .defaultSuccessUrl("/home.html")
