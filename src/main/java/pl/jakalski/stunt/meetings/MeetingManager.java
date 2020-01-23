@@ -1,7 +1,6 @@
 package pl.jakalski.stunt.meetings;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 class MeetingManager {
     Map<Integer,Meeting> allMeetings=new HashMap<>();
@@ -14,5 +13,10 @@ class MeetingManager {
 
     Meeting find(Integer id) {
         return allMeetings.get(id);
+    }
+    public List<Meeting> allMeetings (){
+        Collection<Meeting> collection = allMeetings.values();
+        ArrayList<Meeting> arrayList = new ArrayList<>(collection);
+        return arrayList;
     }
 }

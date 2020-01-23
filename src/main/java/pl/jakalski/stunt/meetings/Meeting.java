@@ -6,9 +6,9 @@ class Meeting {
 
     private static int nextId = 0;
     private Integer id;
-    private String meetingTitle;
-    private LocalDateTime meetingDate;
-    private String meetingSpecs;
+    //private String meetingTitle;
+    //private LocalDateTime meetingDate;
+    //private String meetingSpecs;
 
     Meeting() {
         nextId++; //nextId gets increased
