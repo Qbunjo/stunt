@@ -1,5 +1,7 @@
 package pl.jakalski.stunt.meetings;
 
+import java.time.LocalDateTime;
+
 class Meeting {
 
     private static int nextId = 0;
