@@ -44,5 +44,6 @@ class MeetingManagerTest {
         assertNotNull(actual);
 
     }
-
+ //gets string with username and returns all meetings
+    //deleting meetings
 }

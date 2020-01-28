@@ -15,7 +15,7 @@ class Meeting {
         id = nextId; //creates new Id
     }
 
-    Integer getId() {
+    public Integer getId() {
         return id;
     }
 
