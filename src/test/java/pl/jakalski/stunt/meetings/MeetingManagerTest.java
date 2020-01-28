@@ -3,9 +3,13 @@ package pl.jakalski.stunt.meetings;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 class MeetingManagerTest {
+
+    private static final String TEST_OWNER = "user01";
+
     private MeetingManager tested;
 
     @BeforeEach
@@ -15,8 +19,8 @@ class MeetingManagerTest {
 
     @Test
     void shouldCreateMeeting() {
-         //when
-        Meeting createdMeeting = tested.createMeeting();
+        //when
+        Meeting createdMeeting = tested.createMeeting(TEST_OWNER);
         //then
         assertNotNull(createdMeeting);
     }
@@ -24,7 +28,7 @@ class MeetingManagerTest {
     @Test
     void shouldFoundMeetingHaveTheSameId() {
         //given
-        Meeting createdMeeting = tested.createMeeting();
+        Meeting createdMeeting = tested.createMeeting(TEST_OWNER);
         //when
         Meeting found = tested.find(createdMeeting.getId());
         //then
@@ -36,23 +40,29 @@ class MeetingManagerTest {
     @Test
     void shouldIdBeNotNull() {
         //given
-
-        Meeting createdMeeting = tested.createMeeting();
-
+        Meeting createdMeeting = tested.createMeeting(TEST_OWNER);
         //when
         Integer actual = createdMeeting.getId();
         assertNotNull(actual);
-
     }
-   // @Test
-    //void shouldGetStringWithUsernameAndReturnsAllMeetings(){
+
+    @Test
+    void shouldInitializeOwnerForNewlyCreatedMeeting() {
         //given
-      //  Meeting createdMeeting = tested.createMeeting();
+        Meeting createdMeeting = tested.createMeeting(TEST_OWNER);
         //when
-      //  String thisUser="user01";
+        String owner = createdMeeting.getOwner();
+        //then
+        assertEquals("user01", owner);
+    }
 
-
-   // };
- //gets string with username and returns all meetings
-    //deleting meetings
+    @Test
+    void shouldReturnOwnerForFoundMeeting() {
+        //given
+        Meeting createdMeeting = tested.createMeeting(TEST_OWNER);
+        //when
+        Meeting found = tested.find(createdMeeting.getId());
+        //then
+        assertEquals(createdMeeting.getOwner(), found.getOwner());
+    }
 }

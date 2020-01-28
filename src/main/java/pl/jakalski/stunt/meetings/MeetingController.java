@@ -14,13 +14,15 @@ public class MeetingController {
     }
 
     @PostMapping(produces = "application/json")
-    public @ResponseBody Meeting create() {
-        Meeting myMeeting = meetingManager.createMeeting();
+    @ResponseBody
+    public Meeting create() {
+        Meeting myMeeting = meetingManager.createMeeting(null);
         return myMeeting;
     }
 
-    @GetMapping (produces = "application/json")
-    public @ResponseBody List<Meeting> getAll(){
-       return meetingManager.allMeetings();
+    @GetMapping(produces = "application/json")
+    @ResponseBody
+    public List<Meeting> getAll() {
+        return meetingManager.allMeetings();
     }
 }
