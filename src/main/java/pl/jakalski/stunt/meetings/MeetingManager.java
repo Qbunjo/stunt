@@ -19,4 +19,5 @@ class MeetingManager {
         ArrayList<Meeting> arrayList = new ArrayList<>(collection);
         return arrayList;
     }
+   // Meeting findAllMine(String owner){return allMeetings}
 }

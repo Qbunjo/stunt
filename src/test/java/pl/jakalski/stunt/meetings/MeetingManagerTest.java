@@ -44,6 +44,15 @@ class MeetingManagerTest {
         assertNotNull(actual);
 
     }
+   // @Test
+    //void shouldGetStringWithUsernameAndReturnsAllMeetings(){
+        //given
+      //  Meeting createdMeeting = tested.createMeeting();
+        //when
+      //  String thisUser="user01";
+
+
+   // };
  //gets string with username and returns all meetings
     //deleting meetings
 }
