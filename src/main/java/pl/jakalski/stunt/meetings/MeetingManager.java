@@ -13,7 +13,7 @@ class MeetingManager {
      * @return new meeting with unique ID
      */
     Meeting createMeeting(String owner) {
-        Meeting meeting = new Meeting();
+        Meeting meeting = new Meeting(owner);
         allMeetings.put(meeting.getId(), meeting); //add to map
         return meeting;
     }

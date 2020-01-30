@@ -6,14 +6,18 @@ class Meeting {
     private Integer id;
     private String ownerName;
 
-    Meeting() {
-       // ownerName= CurrentUserServiceImpl.retrieveUsername;
+    Meeting(String ownerName) {
         nextId++; //nextId gets increased
-        id = nextId; //creates new Id
+        this.id = nextId; //creates new Id
+        this.ownerName = ownerName;
     }
 
     public Integer getId() {
         return id;
+    }
+
+    public String getOwner() {
+        return ownerName;
     }
 
 }
